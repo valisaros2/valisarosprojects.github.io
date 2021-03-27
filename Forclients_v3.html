@@ -1,0 +1,557 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&amp;display=swap" rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <!-- IonIcons -->
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+    <title>Solv</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* .page {
+            background-image: url("https://i.postimg.cc/QM9qQNQ6/For-Clients.jpg");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        } */
+
+        .welcome__page {
+            position: relative;
+        }
+
+        .title__section {
+            padding-top: 10vh;
+            width: 1000px;
+            height: 250px;
+            padding-left: 5vw;
+        }
+
+        .title {
+            font-family: 'Eczar', serif;
+            font-size: 56px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.11;
+            letter-spacing: 0.16px;
+            color: white;
+            margin: 0;
+            padding-top: 10px;
+        }
+
+        .buttons {
+            display: flex;
+        }
+
+        .custom-btn {
+            width: 250px !important;
+            height: 75px !important;
+            margin: 35px 23px 0 0;
+            object-fit: contain;
+            border-radius: 40px !important;
+            color: #185bd7 !important;
+            font-family: 'Eczar', serif;
+            font-size: 30px !important;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.11;
+            letter-spacing: 0.16px;
+        }
+
+        .btn1 {
+            background-color: #6bf28c !important;
+        }
+
+        .btn2 {
+            padding-left: 20px;
+        }
+
+        .btn-success {
+            border-color: #6bf28c !important;
+        }
+
+        .info__section {
+            display: flex;
+            flex-direction: column;
+            margin: 100px 6vw 10vw 6vw;
+        }
+
+        .absolute {
+            position: absolute;
+            height: 500px;
+            z-index: 2;
+            top: 1px;
+        }
+
+        .background__img {
+            /* height: 100%; */
+            height: 100vh !important;
+            width: 100vw;
+            /* min-width: 1000px object-fit: contain;
+             min-height: 1000px object-fit: contain; */
+            z-index: 1;
+            position: relative;
+            display: flex;
+            /* align-self: center !important; */
+            align-self: top;
+            object-fit: cover;
+        }
+
+        .info__section h2 {
+            font-family: Eczar;
+            font-size: 76px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.12;
+            letter-spacing: 0.22px;
+            color: #2f52e0 !important;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .info__section p {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 25px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.33;
+            letter-spacing: 0.22px;
+            color: #2f52e0;
+            margin-top: 20px;
+        }
+
+        .info__section h3 {
+            margin-top: 40px;
+            font-family: Eczar;
+            font-size: 30px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.25;
+            letter-spacing: 0.22px;
+            color: #2f52e0;
+        }
+
+        .allura {
+            font-family: 'Allura', cursive !important;
+            font-size: 78px;
+            font-weight: normal !important;
+            font-stretch: normal !important;
+            font-style: normal !important;
+            line-height: 1.09 !important;
+            letter-spacing: 0.22px !important;
+            text-align: center !important;
+            color: #2f52e0 !important;
+            margin-top: 20px;
+        }
+
+        .banner {
+            width: 100vw;
+        }
+
+        .banner__img {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 1080px) {
+            .title__section {
+                width: 720px;
+            }
+        }
+
+        @media screen and (max-width: 720px) {
+            .title__section {
+                width: 90vw;
+            }
+
+            .title {
+                font-size: 40px;
+            }
+
+            .custom-btn {
+                font-size: 20px !important;
+            }
+
+            .info__section {
+                margin: 50px 10vw 10vh 10vw;
+            }
+
+            .info__section h2 {
+                font-size: 60px;
+                margin-bottom: 20px;
+            }
+
+            .info__section p {
+                font-size: 20px;
+            }
+
+            .info__section h3 {
+                font-size: 40px;
+                margin-top: 10px;
+                line-height: 1.25;
+            }
+        }
+
+        .faq__section {
+            width: 100%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .faq__container {
+            width: 100%;
+            height: 100vh;
+            max-height: 100vh;
+            /* max-width: 90rem;
+            margin: 0 auto;
+            padding: 0 1.5rem; */
+            margin: 100px 6vw 10vw 6vw;
+        }
+
+        .faq__section h2 {
+            font-family: Eczar;
+            font-size: 76px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.12;
+            letter-spacing: 0.22px;
+            color: #2f52e0 !important;
+            margin-bottom: 40px;
+            text-align: center;
+            margin: 0px 0px 50px 0px;
+        }
+
+        .faq__section h3 {
+            font-family: Eczar;
+            font-size: 40px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.25;
+            letter-spacing: 0.22px;
+            color: #2f52e0;
+            margin: 100px 0px 25px 0px;
+        }
+
+        .faq__section p {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 25px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.33;
+            letter-spacing: 0.22px;
+            color: #2f52e0;
+            margin-top: 10px;
+        }
+
+        .accordion-item {
+            background-color: white;
+            border-radius: .4rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            padding-left: 0 !important;
+            /* box-shadow: .5rem 2px .5rem rgba(0,0,0,.1); */
+        }
+
+        .accordion-link {
+            font-size: 2.5rem;
+            color: #2f52e0;
+            text-decoration: none !important;
+            background-color: white;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+            font-family: Eczar;
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 0.22px;
+        }
+
+        .accordion-link .chevron-up-outline {
+            min-width: 50px;
+            margin-left: 50px;
+        }
+
+        .accordion-link .chevron-down-outline {
+            min-width: 50px;
+            margin-left: 25px;
+        }
+
+        .accordion-link i {
+            color: #111;
+            padding: .5rem;
+        }
+
+        .accordion-link .chevron-up-outline {
+            display: none;
+        }
+
+        .answer {
+            overflow: hidden;
+            max-height: 0;
+            position: relative;
+            background-color: white;
+            font-size: 1.25rem;
+            color: #111;
+            transition: max-height 650ms;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.33;
+            letter-spacing: 0.22px;
+            color: #2f52e0;
+            margin-top: 20px;
+            font-size: 25px;
+        }
+
+        .answer p {
+            font-size: 1.4rem;
+            color: white;
+        }
+
+        .accordion-item:target .answer {
+            max-height: 20rem;
+        }
+
+        .accordion-item:target .accordion-link .chevron-down-outline {
+            display: none;
+        }
+
+        .accordion-item:target .accordion-link .chevron-up-outline {
+            display: block;
+        }
+
+        @media screen and (max-width: 720px) {
+            .faq__section h2 {
+                font-size: 60px;
+            }
+
+            .faq__section h3 {
+                font-size: 35px;
+            }
+
+            .accordion-link {
+                font-size: 30px;
+            }
+
+            .answer {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+
+
+
+<main class="page">
+    <div class="welcome__page">
+        <div class="background">
+            <img class=" background__img" alt="Banner" src="https://i.postimg.cc/QM9qQNQ6/For-Clients.jpg">
+            <div class="title__section absolute">
+                <h1 class="title"><span style="font-size: 48px;">Link with freelancers <br> and find the skills you’re
+                        <br> looking for.</span></h1>
+                <div class="buttons">
+                    <button onclick="window.location.href='https://www.letsolv.co';" type="button"
+                        class="btn btn-success custom-btn btn1">Sign up</button>
+                    <button onclick="window.location.href='https://www.letsolv.co/en/listings/new';" type="button"
+                        class="btn btn-light custom-btn btn2">Post a project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<div class="info__section">
+    <h2>How It Works</h2>
+    <p>Solv integrates the most popular and top freelancers in the region, from accountants to consultants, designers,
+        developers, translators, writers, and more. These freelancers are screened and verified before their start at
+        Solv. The majority are&nbsp;highly
+        skilled and have a vast of experience that can help you solve what you need at any moment in time!
+    </p>
+
+    <h3>All you have to do is</h3>
+    <p>01. Start by posting a job</p>
+    <p style="margin-left: 50px;">
+        <strong>•</strong> The job is what you require help in, for example, can be logo design, consulting on a
+        contract, translation, and much more. <br> • Provide a full brief on what is required <br> • Include budget <br>
+        <strong>•</strong> Include timeline <br>
+    </p>
+
+    <p>02. You have two options after a job has been posted:</p>
+    <p style="margin-left: 60px;">
+        <strong>A.</strong> Wait until you receive bids <br>
+        <strong>B. </strong>Search for suitable freelancers and ask them to check out your project post! You can also
+        favorite them.
+        <br>
+    </p>
+    <p>03. If you have received bids - view proposals,&nbsp;interview, and analyze whichever you feel is suitable and
+        matches your project post.</p>
+    <p>04. If you have sent out an invitation and received an acceptance - interview and analyze the freelancer and see
+        whether he/she&nbsp;best fits.
+    </p>
+    <p>05. Prepare the contract and list milestones based on what has been agreed on with the freelancer.<br>
+    </p>
+    <p>06. Release the payment when you have been fully satisfied with the project and work&nbsp;received!
+    </p>
+    <h3> Payment Information
+    </h3>
+    <p> Every client will be charged a processing fee as follows:</p>
+    <p>
+        <meta>•&nbsp;<span data-story-id="story_180d7d9c12e37d2db2a01524de0ff905"
+            data-room-id="room_4ffe2eb0019debb7d01b4b0d138f0bbc" data-timestamp="1612722753252" data-text="BENEFIT: 1.95%+ 100 fils
+                        Local Visa/ Mastercard: 2.95%+ 100 fils
+                        Regional Visa/ Mastercard: 3.95%+ 100 fils
+                        Global Cards: 3.95%+ 100 fils" data-userid="1305212762701520896"
+            data-orgid="1305212763059068928">BENEFIT:
+            1.95%+&nbsp;
+            <meta>0.27 USD<br>
+            <meta>•&nbsp;Local Visa/ Mastercard: 2.95%+&nbsp;
+            <meta>0.27 USD<br>
+            <meta>•&nbsp;Regional Visa/ Mastercard: 3.95%+ 0.27 USD<br>
+            <meta>•&nbsp;Global Cards: 3.95%+
+            <meta>0.27 USD
+        </span>
+    </p>
+    <h3> Tips on choosing the right freelancer
+    </h3>
+    <p>
+        <meta>•&nbsp;Check out the freelancer’s previous work <br>
+        <meta>•&nbsp;Check out the ratings and freelancer’s feedback <br>
+        <meta>•&nbsp;Contact the freelancer and screen him/her yourself and ask as many questions to ensure your project
+        goals are aligned with his/her expertise <br>
+    </p>
+</div>
+<div class="banner">
+    <img class="banner__img" alt="Banner" src="https://i.postimg.cc/gkgy1L4S/bitmap.jpg">
+</div>
+<section class="faq__section">
+    <div class="faq__container">
+        <h2>FAQ’s</h2>
+        <p>Got Questions?! Here are some of the most common questions received and have been answered!
+        </p>
+        <div class="accordion">
+            <div class="accordion-item" id="question1">
+                <a class="accordion-link" href="#question1">
+                    Are the freelancers screened?
+                    <ion-icon name="chevron-down-outline" class="chevron-down-outline"></ion-icon>
+                    <ion-icon name="chevron-up-outline" class="chevron-up-outline"></ion-icon>
+                </a>
+                <div class="answer">
+                    Yes they are! Every freelancer’s profile has to be approved by the Solv admin team. We have several
+                    procedures in place to ensure that the quality of the freelancer is to the standard needed to
+                    complete jobs and hope to deliver what you need!
+                    <br>
+                    <br> However, it is your responsibility to screen the freelancer beforehand, we suggest having a few
+                    questions, take a quick call or even set a meeting to discuss the project in full detail to ensure
+                    that they are best fit for the
+                    job.
+                </div>
+            </div>
+            <div class="accordion-item" id="question2">
+                <a class="accordion-link" href="#question2">
+                    How do I create a new project?
+                    <ion-icon name="chevron-down-outline" class="chevron-down-outline"></ion-icon>
+                    <ion-icon name="chevron-up-outline" class="chevron-up-outline"></ion-icon>
+                </a>
+                <div class="answer">
+                    • Click on the “Post a new project” button on the top right of the page or
+                    <a href="https://www.letsolv.co/en/listings/new">click here</a>.
+                    <br> • Select the category of choice and fill in all required information.&nbsp;<br> •
+                    <strong><u>Tip</u></strong>: Be as clear as you can, if you are unsure of certain specifics, you can
+                    mention in the box that you require a call
+                    to discuss the project in order to list down the deliverables.
+                </div>
+            </div>
+            <div class="accordion-item" id="question3">
+                <a class="accordion-link" href="#question3">
+                    Can I pay with my credit card?
+                    <ion-icon name="chevron-down-outline" class="chevron-down-outline"></ion-icon>
+                    <ion-icon name="chevron-up-outline" class="chevron-up-outline"></ion-icon>
+                </a>
+                <div class="answer">
+                    Yes, at the moment all payments will be done online either through Paypal or with your debit/credit
+                    card. Payments will be done directly prior to the start of the project and will be held in escrow.
+                    This will ensure that protection for yourself and the
+                    freelancer. Payment will only be released if you are fully satisfied.
+                </div>
+            </div>
+            <div class="accordion-item" id="question4">
+                <a class="accordion-link" href="#question4">
+                    What if I am not happy with the outcome of the
+                    <br>
+                    freelancer’s work? Can I request a refund?
+                    <ion-icon name="chevron-down-outline" class="chevron-down-outline"></ion-icon>
+                    <ion-icon name="chevron-up-outline" class="chevron-up-outline"></ion-icon>
+                </a>
+                <div class="answer">
+                    If you are not happy, you are advised to ask the freelancer to do the revisions required. As well,
+                    you can resolve any disputes by contacting our <a class="a__links" href="mailto:support@letsolv.co"
+                        target="_blank">Support Team.</a>
+
+                </div>
+            </div>
+            <div class="accordion-item" id="question5">
+                <a class="accordion-link" href="#question5">
+                    I posted a project but I don't want to go ahead anymore.
+                    <br>
+                    How do I cancel or delete a project
+                    posted?
+                    <ion-icon name="chevron-down-outline" class="chevron-down-outline"></ion-icon>
+                    <ion-icon name="chevron-up-outline" class="chevron-up-outline"></ion-icon>
+                </a>
+                <div class="answer">
+
+                    •&nbsp;
+                    <meta>Go to "My Project"<br> •&nbsp;
+                    <meta>Click on the project you want to cancel/delete<br> •&nbsp;
+                    <meta>On the right-hand side of the page you can either close or delete the project.&nbsp;
+
+                </div>
+            </div>
+            <div class="accordion-item" id="question6">
+                <a class="accordion-link" href="#question6">
+                    Can I sign up as a freelancer as well?
+                    <ion-icon name="chevron-down-outline" class="chevron-down-outline"></ion-icon>
+                    <ion-icon name="chevron-up-outline" class="chevron-up-outline"></ion-icon>
+                </a>
+                <div class="answer">
+                    At the moment it is not possible, we are looking to integrate this feature soon. All you have to do
+                    is create a second account with a secondary e-mail.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
