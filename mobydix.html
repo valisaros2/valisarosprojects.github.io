@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        MobyDix.com
+    </title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap'); */
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+        body {
+            /* font-family: 'Montserrat', sans-serif; */
+            font-family: 'Lato', sans-serif;
+            color: #333;
+        }
+
+
+        .navigation {
+            display: flex;
+        }
+
+        .navigation .container {
+            margin-right: 7vw;
+        }
+
+        .anniversary__svg {
+            width: 150px;
+        }
+
+        .login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 4vh;
+            margin-right: 5vw;
+            width: 80px;
+            height: 40px;
+            text-decoration: none !important;
+            font-weight: bold;
+            border: 2px solid black;
+        }
+
+        a {
+            color: #11AAE1;
+            text-decoration: none !important;
+        }
+
+        .nav-zone {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            height: 12.5vh;
+            padding: 0px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            font-size: 0.7em;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            padding: 20px;
+        }
+
+        .nav-zone a {
+            color: #222;
+            text-decoration: none;
+            font-size: 1.5em;
+            padding: 12px 10px;
+        }
+
+        .nav-zone a:hover {
+            color: #11AAE1;
+            transition: 0.3s;
+        }
+
+        .nav-zone:hover {
+            color: #11AAE1;
+            text-decoration: none;
+        }
+
+        .nav-links:hover {
+            transition: all 0.3s;
+            color: #11AAE1;
+        }
+
+        .logo {
+            max-width: 1000vw;
+            height: auto;
+        }
+
+        .display-none {
+            display: none !important;
+        }
+
+        .show-hide {
+            display: none;
+        }
+
+        .login2 a {
+            color: #11AAE1;
+        }
+
+        .login2 a:hover {
+            color: #136d8d;
+        }
+
+        /* Start BURGER MENU */
+        .burger {
+            display: none;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: #222;
+            margin: 6px;
+            transition: all 0.3s ease;
+        }
+
+        @media screen and (max-width: 1250px) {
+            .login {
+                width: 100px;
+            }
+
+            .anniversary__svg {
+                width: 100px;
+            }
+
+            .logo__svg {
+                width: 200px;
+
+            }
+        }
+
+        @media screen and (max-width: 1300px) {
+            body {
+                overflow-x: hidden;
+            }
+
+            .nav-zone {
+                padding: 0;
+                justify-content: flex-start;
+            }
+
+            .nav-links {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                background-color: rgb(218, 218, 218);
+                align-items: center;
+                transform: translateX(100%);
+                transition: transform 0.5 ease-in;
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: 500px;
+                z-index: 10;
+            }
+
+            .show-hide {
+                display: block;
+            }
+
+            .login {
+                display: none !important;
+            }
+
+            .count::before {
+                font-size: 2.5em;
+            }
+
+            .nav-links a {
+                font-size: 3.5em;
+            }
+
+            .nav-links li {
+                opacity: 0;
+            }
+
+            .burger {
+                display: block;
+                cursor: pointer;
+                position: fixed;
+                z-index: 10;
+                right: 2em;
+            }
+
+        }
+
+        .nav-active {
+            transform: translateX(0%);
+        }
+
+        @media screen and (max-width: 600px) {
+            .nav-links {
+                width: 80vw;
+            }
+
+            .nav-links a {
+                font-size: 2.5em;
+            }
+        }
+
+        /* End BURGER MENU
+
+/* Start Nav Burger Animation */
+        @keyframes navLinkFade {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+
+        .toggle .line1 {
+            transform: rotate(-45deg) translate(-6px, 6.5px);
+        }
+
+        .toggle .line2 {
+            opacity: 0;
+        }
+
+        .toggle .line3 {
+            transform: rotate(45deg) translate(-6px, -6.5px);
+        }
+
+        /* End Nav Burger Animation */
+        /* End Nav Bar */
+
+
+
+
+        /* D38CFF */
+        .gradient {
+            background: -webkit-linear-gradient(-30deg, #03A4DF 0%, #8cbcf3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        /* -------------------------------- HOME ----------------------------- */
+
+
+        p {
+            color: #3C3C3C;
+            font-size: 30px;
+        }
+
+        .main {
+            display: flex;
+            margin-top: 20vh;
+        }
+
+        .main__text {
+            flex: 0.5;
+        }
+
+        .main__svg {
+            flex: 0.5;
+        }
+
+        .svg__art {
+            object-fit: contain;
+            position: relative;
+            max-height: 25vw;
+            width: 100%;
+        }
+
+        .main__text p {
+            color: #3C3C3C;
+            font-weight: 600;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+        }
+
+        .main__text h1 {
+            color: #11AAE1;
+            font-weight: bold;
+            font-size: 70px;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 0;
+        }
+
+        .main__text h2 {
+            color: #3C3C3C;
+            font-size: 30px;
+            font-family: 'Roboto', sans-serif;
+            padding-top: 5vh;
+            padding-bottom: 2.5vh;
+        }
+
+        .gradient__line {
+            height: 7px;
+            width: 55%;
+            background-color: #03A4DF;
+            background: -webkit-linear-gradient(-30deg, #D979FF 0%, #3AC1D4 100%);
+        }
+
+        .gradient__line2 {
+            height: 7px;
+            width: 55%;
+            background-color: #03A4DF;
+            background: -webkit-linear-gradient(-30deg, #3AC1D4 0%, #D979FF 100%);
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 100px;
+        }
+
+        .gradient__underline {
+            width: 100%;
+            display: flex;
+        }
+
+        .flex-end {
+            justify-content: flex-end;
+        }
+
+        .flex-start {
+            justify-content: flex-start;
+        }
+
+        .custom__btn {
+            border: #222 2px solid;
+            color: #11AAE1;
+            font-weight: bold;
+            width: 200px;
+            height: 70px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 300px !important;
+            font-size: 25px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background-color: #222;
+            color: white;
+        }
+
+
+        @media screen and (max-width: 1398px) {
+            .gradient__line {
+                width: 55%;
+            }
+
+            .gradient__line2 {
+                width: 55%;
+                margin-right: 10px;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            .main__text h1 {
+                font-size: 55px;
+            }
+
+            .main__text h2 {
+                font-size: 25px;
+            }
+
+            .gradient__line {
+                width: 55%;
+            }
+
+            .gradient__line2 {
+                width: 55%;
+                margin-right: 40px;
+            }
+        }
+
+
+
+        @media screen and (max-width: 1024px) {
+            .main {
+                flex-direction: column;
+                margin-top: 10vh;
+            }
+
+            .main__svg {
+                margin-top: 10vh;
+            }
+
+            .main__text h1 {
+                font-size: 50px;
+            }
+
+            .main__text h2 {
+                font-size: 25px;
+            }
+
+            .svg__art {
+                max-height: 45vw;
+            }
+
+            .gradient__line {
+                width: 300px;
+            }
+
+            .gradient__line2 {
+                width: 200px;
+                justify-content: flex-start !important;
+            }
+
+            .flex-end {
+                justify-content: flex-start;
+            }
+
+            .custom__btn {
+                width: 175px;
+                height: 60px;
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width: 512px) {
+            .main__text p {
+                font-size: 15px;
+            }
+
+            .main__text h1 {
+                font-size: 40px;
+            }
+
+            .main__text h2 {
+                font-size: 20px;
+            }
+        }
+
+
+        /* ---------------------------------------- END HOME --------------------------------*/
+
+
+
+
+
+        .center {
+            text-align: center;
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 40px;
+            font-family: 'Roboto', sans-serif;
+            padding-top: 5vh;
+            padding-bottom: 5vh;
+        }
+
+        .why__mobydix {
+            margin-top: 10vh;
+        }
+
+        .line {
+            width: 25%;
+            height: 4px;
+            background-color: #11AAE1;
+        }
+
+        .why__wrapper {
+            display: flex;
+            padding-bottom: 5vh;
+        }
+
+        .why__text {
+            flex: 0.5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .why__img {
+            flex: 0.5;
+        }
+
+        .why__text h3 {
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+
+        .why__text ul {
+            padding-top: 3vh;
+            font-size: 20px;
+        }
+
+        .why__text li {
+            padding-top: 2vh;
+        }
+
+        .padding__left {
+            padding-left: 75px;
+        }
+
+        .reverse {
+            display: flex;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .why__mobydix {
+                margin-top: 5vh;
+            }
+
+            .why__wrapper {
+                flex-direction: column;
+                padding-bottom: 15vh;
+            }
+
+            .reverse {
+                flex-direction: column-reverse;
+            }
+
+            .padding__left {
+                padding: 0px;
+            }
+        }
+
+
+
+
+
+
+
+        .who__are__we {
+            width: 60vw;
+            max-width: 70vw;
+            margin-top: 25vh;
+        }
+
+        .blue {
+            color: #000;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .who__are__we {
+                padding-top: 0vh;
+                width: 90vw;
+                max-width: 90vw;
+            }
+
+            p {
+                font-size: 22px
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .solutions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 100px;
+        }
+
+        .solution__ab {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .solution__cd {
+            display: flex;
+        }
+
+        .solution {
+            width: 30vw;
+            height: 300px;
+            margin: 50px;
+            border-radius: 10px;
+            background-color: #222222;
+            box-shadow: -6px 9px 11px rgba(56, 56, 56, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .solution h3 {
+            font-size: 35px;
+            color: white;
+        }
+
+        .solution__line {
+            width: 15vw;
+            height: 2px;
+            background-color: white;
+            margin: 10px 0px 40px 0px;
+        }
+
+        .solution p {
+            /* width: 20vw;
+    max-width: 20vw;
+    height: 50vh; */
+            margin: 0 20px 0px 20px;
+            color: white;
+            font-size: 25px;
+        }
+
+        /* 
+.solution__a {
+    margin-right: 50px;
+}
+
+.solution__b {
+    margin-left: 50px;
+} */
+
+
+        @media screen and (max-width: 1024px) {
+            .solution {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .solution__ab {
+                flex-direction: column;
+            }
+
+            .solution__cd {
+                flex-direction: column;
+            }
+
+            .solution__line {
+                width: 50vw;
+            }
+        }
+
+
+
+        .footer {
+            background-color: #272727;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .footer p {
+            text-align: center;
+            color: #F3F3F3;
+        }
+
+        .down__footer {
+            margin-top: 15vh;
+            display: flex;
+        }
+
+        .left__footer {
+            flex: 0.7;
+        }
+
+        .right__footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 0.3;
+            border-left: 2px solid #F3F3F3;
+        }
+
+        .footer__links {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        .footer__link {
+            margin-bottom: 25px;
+        }
+
+        .footer a {
+            color: #F3F3F3;
+            margin-right: 50px;
+            font-size: 25px;
+        }
+
+        .footer__btn {
+            display: flex;
+            margin-bottom: 25px;
+        }
+
+        .footer__btn .btn {
+            border-color: #F3F3F3;
+            width: 250px;
+        }
+
+        .first__add {
+            margin-bottom: 50px;
+        }
+
+
+        @media screen and (max-width: 1024px) {
+            .down__footer {
+                flex-direction: column;
+            }
+
+            .right__footer {
+                margin-top: 50px;
+                border-left: none;
+                border-top: 2px solid #F3F3F3;
+            }
+
+            .first__add {
+                margin-bottom: 25px;
+                margin-top: 25px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .footer__btn {
+                flex-direction: column;
+            }
+
+            .footer__btn .btn {
+                width: 100% !important;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="navigation">
+        <div class="container">
+            <nav class="nav-zone">
+                <div class="left-zone">
+                    <ol class="nav-links">
+                        <li class="link1">
+                            <a href="">Testimonials</a>
+                        </li>
+                        <li class="link2">
+                            <a href="">Subscribe</a>
+                        </li>
+                        <li class="link3">
+                            <a href="">FAQ</a>
+                        </li>
+
+                        <li class="link4 display-none show-hide">
+                            <a href="">Home</a>
+                        </li>
+                        <li class="link5 display-none show-hide">
+                            <a href="">Features</a>
+                        </li>
+                        <li class="link6 display-none show-hide">
+                            <a href="">Contact Us</a>
+                        </li>
+                        <li class="login2 display-none show-hide">
+                            <a href="">Sign In</a>
+                        </li>
+                    </ol>
+
+                </div>
+                <div class="logo">
+                    <a class="logo" href="">
+                        <img class="logo__svg" src="https://i.postimg.cc/FK5hGQ5r/logo.png" alt="logo">
+                    </a>
+                </div>
+
+                <div class="right-zone">
+                    <ol class="nav-links">
+                        <li class="link4">
+                            <a href="">Home</a>
+                        </li>
+                        <li class="link5">
+                            <a href="">Features</a>
+                        </li>
+                        <li class="link6">
+                            <a href="">Contact Us</a>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+        <div class="login darkmode-ignore">
+            <a href="https://new.flexlists.com/login">Sign In</a>
+        </div>
+
+
+    </div>
+
+    <div class="main container">
+        <div class="main__text">
+            <p>Welcome to MobyDix</p>
+            <h1 class="gradient">
+                Smart Traffic for
+            </h1>
+            <div class="gradient__underline flex-start">
+                <div class="gradient__line"></div>
+            </div>
+            <h1 class="gradient">
+                Smart Marketers
+            </h1>
+            <div class="gradient__underline flex-end">
+                <div class="gradient__line2"></div>
+            </div>
+            <h2>An AI powered DSP to cater to your digital
+                advertising needs and revenue generation
+            </h2>
+            <a class="btn custom__btn" href="#list__create" role="button">Sign Up</a>
+        </div>
+        <div class="main__svg">
+            <img class="svg__art" src="https://i.postimg.cc/j5hNtXQf/20943438-1.png" alt="First art">
+        </div>
+    </div>
+
+
+    <div class="who__are__we container">
+        <h2 class="title center">Who are we?</h2>
+        <p class="center">
+            MobyDix is a <span class="gradient">user friendly</span> DSP (demand-side platform) that is
+            <br>
+            connected to over 30 SSP.
+        </p>
+        <p class="center">
+            We help advertisers to buy the most <span class="gradient">relevant ad impressions</span>
+            over the internet for the <span class="gradient">best possible prices.</span>
+        </p>
+        <p class="center">
+            With our help, you can quickly find <span class="gradient">suitable ad</span> inventory,
+
+            bid or purchase on it and display your ads to the <span class="gradient">targeted audience.</span>
+        </p>
+        <p class="center">
+            You can get access to all of these inventory sources using
+
+            just a single interface and buy ad space of your choice.
+        </p>
+    </div>
+
+    <div class="why__mobydix container">
+        <h2 class="title center">Why MobyDix?
+        </h2>
+        <div class="why__wrapper container">
+            <div class="why__text">
+                <h3>AI-based performance optimization</h3>
+                <div class="line"></div>
+                <ul>
+                    <li>Self-learning algorithms that target perfect audiences for your business</li>
+                    <li>Real-time campaign optimization by CPM, CPC, CPV, or almost any other metric</li>
+                    <li>Supported by hands-on expertise of the MobyDix
+                        managers</li>
+                </ul>
+            </div>
+            <div class="why__img padding__left">
+                <img class="svg__art" src="https://i.postimg.cc/W3qxh51d/20945347-1.png" alt="First art">
+            </div>
+        </div>
+        <div class="why__wrapper container reverse">
+            <div class="why__img">
+                <img class="svg__art" src="https://i.postimg.cc/NjpFQkFh/20945851-1.png" alt="First art">
+            </div>
+            <div class="why__text padding__left">
+                <h3>Real-time reporting and transparency</h3>
+                <div class="line"></div>
+                <ul>
+                    <li>You can immediately pull reports via the API or UI</li>
+                    <li>Real-time verified measurements for you</li>
+                    <li>All the metrics that you need in just one dashboard</li>
+                </ul>
+            </div>
+        </div>
+        <div class="why__wrapper container">
+            <div class="why__text">
+                <h3>Proprietary technology</h3>
+                <div class="line"></div>
+                <ul>
+                    <li>Independent ad server and omni-channel DSP, SSP</li>
+                    <li>Powered by automation, machine learning and predictive modeling</li>
+                    <li>Functionality in line with the market trends, as expected</li>
+                </ul>
+            </div>
+            <div class="why__img padding__left">
+                <img class="svg__art" src="https://i.postimg.cc/QxjjVKRj/20944996-1.png" alt="First art">
+            </div>
+        </div>
+        <div class="why__wrapper container reverse">
+            <div class="why__img">
+                <img class="svg__art" src="https://i.postimg.cc/dtfNpzRg/20943892-1.png" alt="First art">
+            </div>
+            <div class="why__text padding__left">
+                <h3>Self-service UI and real-time API</h3>
+                <div class="line"></div>
+                <ul>
+                    <li>Friendly API and well documented</li>
+                    <li>One of the most powerful and simple user iterface</li>
+                    <li>360-degree view of your programmatic business</li>
+                </ul>
+            </div>
+        </div>
+        <div class="why__wrapper container">
+            <div class="why__text">
+                <h3>Service with a human face</h3>
+                <div class="line"></div>
+                <ul>
+                    <li>Prompt troubleshooting and guided onboarding</li>
+                    <li>All the operations and optimization are done by a dedicated manager</li>
+                    <li>Comprehensive training and educational materials for clients</li>
+                </ul>
+            </div>
+            <div class="why__img padding__left">
+                <img class="svg__art" src="https://i.postimg.cc/5tVgM1XK/20943705-1.png" alt="">
+            </div>
+        </div>
+        <div class="why__wrapper container reverse">
+            <div class="why__img">
+                <img class="svg__art" src="https://i.postimg.cc/4xbtVc3w/20943798-1.png" alt="">
+            </div>
+            <div class="why__text padding__left">
+                <h3>It’s affordable and flexible</h3>
+                <div class="line"></div>
+                <ul>
+                    <li>Bring your own algorithms and data</li>
+                    <li>No hard dollar commitments and transparent pricing </li>
+                    <li>Brand and customize your platform as you want.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="solutions container">
+        <h2 class="title center">Solutions
+        </h2>
+        <div class="solution__ab">
+            <a class="solution__a" href="">
+                <div class="solution center">
+                    <h3>Vloggers</h3>
+                    <div class="solution__line">
+                    </div>
+                    <p>Turnkey OTT-video management and monetization</p>
+                </div>
+            </a>
+            <a class="solution__b" href="">
+                <div class="solution center">
+                    <h3>Publishers</h3>
+                    <div class="solution__line">
+                    </div>
+                    <p>Connect to trusted demand partners and generate more yield</p>
+                </div>
+            </a>
+        </div>
+        <div class="solution__cd">
+            <a class="solution__c" href="">
+                <div class=" solution center">
+                    <h3>Agencies</h3>
+                    <div class="solution__line">
+                    </div>
+                    <p>Jumpstart your programmatic business</p>
+                </div>
+            </a>
+            <a class="solution__d" href="">
+                <div class="solution center">
+                    <h3>Enterprises</h3>
+                    <div class="solution__line">
+                    </div>
+                    <p>Unleash your data and regain control of your ad buying</p>
+                </div>
+            </a>
+        </div>
+        <a class="btn custom__btn" href="#list__create" role="button">Sign Up Now</a>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>A demand-side platform is service used by online advertisers to buy mobile, search, and video ads from a
+                marketplace on which publishers list advertising inventory. These platforms allow for the management of
+                advertising across many real-time bidding networks, as opposed to just one, like Google Ads. AI powered
+                DSPs
+                help advertisers and publishers manage their ad inventory effectively to enhance their marketing ROI
+            </p>
+            <div class="down__footer">
+                <div class="left__footer">
+                    <div class="logo">
+                        <a class="logo" href="">
+                            <img class="logo__svg" src="https://i.postimg.cc/nVjVdKtz/logo-footer.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="footer__links">
+                        <div class="footer__link">
+                            <a href="">Company</a>
+                            <a href="">Capabilities</a>
+                            <a href="">Case studies</a>
+                        </div>
+                        <div class="footer__link">
+                            <a href="">Contacts</a>
+                            <a href="">Privacy policy</a>
+                        </div>
+                    </div>
+                    <div class="footer__btns">
+                        <div class="footer__btn">
+                            <a class="btn custom__btn" href="#list__create" role="button">For agencies</a>
+                            <a class="btn custom__btn" href="#list__create" role="button">For publishers</a>
+                        </div>
+                        <div class="footer__btn">
+                            <a class="btn custom__btn" href="#list__create" role="button">For vloggers</a>
+                            <a class="btn custom__btn" href="#list__create" role="button">For enterprises</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right__footer">
+                    <div class="first__add">
+                        <p>Some Street</p>
+                    </div>
+                    <div class="second__add">
+                        <p>Strada Nustiucare
+                            <br>
+                            21566, North Pole
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('.nav-links li');
+            const body = document.body;
+            const link1 = document.querySelector('.link1');
+            const link2 = document.querySelector('.link2');
+            const link3 = document.querySelector('.link3');
+            const link4 = document.querySelector('.link4');
+            const link5 = document.querySelector('.link5');
+            const link6 = document.querySelector('.link6');
+            const login = document.querySelector('.login2');
+
+
+            burger.addEventListener('click', () => {
+
+                //Toggle Nav
+                nav.classList.toggle('nav-active');
+                // Set the body position to fixed when burger clicked
+                //body.style.position = 'fixed';
+                burger.style.position = 'fixed';
+                // link3.className='display-show';
+                link4.classList.remove("display-none");
+                link5.classList.remove("display-none");
+                link6.classList.remove("display-none");
+                login.classList.remove("display-none");
+
+                //Animate Links
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = ''
+                    }
+                    else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                    }
+                });
+
+
+                //Burger animation
+                burger.classList.toggle('toggle');
+
+
+                // Disable the fixed position when burger clicked
+                // burger.style.position = '';
+            });
+
+        }
+
+        navSlide();
+
+    </script>
+</body>
+
+</html>
